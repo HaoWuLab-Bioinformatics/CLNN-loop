@@ -10,24 +10,18 @@ where name1 represents the cell line of the data, name2 represents the CBS pair 
 
 The file "dataOfIMR90" is the data sets for evaluating the prediction ability of the CLNN-loop on a new cell lines.
 
-`x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=10)`
-
-Finally, the training set contains 12077 positive sequences and 12024 negative sequences, and the independent testing set contains 2980 positive sequences and 3046 negative sequences.
-
 ## Overview
  
-The code "data prepare.py" is used for data processing.  
-The code "feature_code.py" and the code "psednc.py" is used for feature extraction, including seven feature extraction methods. 
-The code "model.py" is used for model training and performance evaluation. We perform ten-fold cross-validation on the training set and evaluate the performance of StackTADB on the independent test set.
-The file "feature_k-mers_k=6.rar" is the compressed file of the feature used in this study, containing Kmers-based feature (k=6) of training set and independent test set. 
+The code "feature_code.py" is used for feature extraction, including seven feature extraction methods. 
+The code "LSTM.py" is uesd to build the model.
+The code "main.py" is used for model training and performance evaluation. We perform ten-fold cross-validation on the training set and evaluate the performance of CLNN-loop on the independent test set. Running "main.py" will import LSTM.py automatically.
 
 ## Dependency
 Python 3.6   
 keras  2.3.1  
 sklearn  
 numpy  
-mlxtend  
-h5py 
+tensorflow 2.0
 
 ## Usage
 First, you should perform data preprocessing, you can run the script as: 
