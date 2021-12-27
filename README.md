@@ -20,7 +20,7 @@ The code "tsne.py" is uesd for visualization of feature representations.
 
 The code "LSTM.py" is uesd to build the model.
 
-The code "main.py" is used for model training and performance evaluation. We perform ten-fold cross-validation on the training set and evaluate the performance of CLNN-loop on the independent test set. Running "main.py" will import LSTM.py automatically.
+The code "main.py" is used for model training and performance evaluation. We perform ten-fold cross-validation on the training set and evaluate the performance of CLNN-loop on the independent test set. Running "main.py" will import "LSTM.py" and "data_load.py" automatically.
 
 ## Dependency
 Python 3.6   
