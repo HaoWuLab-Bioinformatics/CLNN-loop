@@ -13,7 +13,13 @@ The file "dataOfIMR90" is the data sets for evaluating the prediction ability of
 ## Overview
  
 The code "feature_code.py" is used for feature extraction, including seven feature extraction methods. 
+
+The code "data_load.py" is uesd for fusing features.
+
+The code "tsne.py" is uesd for visualization of feature representations.
+
 The code "LSTM.py" is uesd to build the model.
+
 The code "main.py" is used for model training and performance evaluation. We perform ten-fold cross-validation on the training set and evaluate the performance of CLNN-loop on the independent test set. Running "main.py" will import LSTM.py automatically.
 
 ## Dependency
@@ -24,14 +30,14 @@ numpy
 tensorflow 2.0
 
 ## Usage
-First, you should perform data preprocessing, you can run the script as: 
+First, you should extract features by running the script as follows: 
 
-`python data prepare.py`  
+`python feature_code.py`  
 
-Then you can extract features you need through running the script as:  
+If you want to visualize features, you can run the script as follows:  
 
-`python feature_code.py` or `python psednc.py`  
+`python tsne.py` 
 
-Finally if you want to compile and run StackTADB, you can run the script as:  
+Finally if you want to compile and run CLNN-loop, you can run the script as:  
 
-`python model.py`
+`python main.py`
