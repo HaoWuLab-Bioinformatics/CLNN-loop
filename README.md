@@ -6,8 +6,9 @@ The file "data" is the data sets used in this study, which contains two cell lin
 
 name1_name2_name3_name4.fasta
 
-where name1 represents the cell line of the data,
-the DNA sequences encoded by one-hot matrix. The dataset contains a total of 15057 positive sequences and 15070 negative sequences, and each sequence consists of one thousand bases. We randomly select 80% of the data set as the training set, and the remaining 20% of the data set as the independent testing set using the script as follows:
+where name1 represents the cell line of the data, name2 represents the CBS pair type of the data, name3 indicates which sequence of the sequence pair and name4 indicates whether the data is the training set or the independent test set.
+
+The file "dataOfIMR90" is the data sets for evaluating the prediction ability of the CLNN-loop on a new cell lines.
 
 `x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=10)`
 
