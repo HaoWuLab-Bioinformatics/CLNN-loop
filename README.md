@@ -3,7 +3,9 @@ CLNN-loop is a deep learning model to predict chromatin loops in the different c
 
 ## Dataset
 The file "data" is the data sets used in this study, which contains two cell lines (K562 and MCF-7) and each cell line contains four types of CBS pair (forward–forward orientation pair, forward–reverse orientation pair, reverse–forward orientation pair and reverse–reverse orientation pair). The naming rules for each file are as follows:
+
 name1_name2_name3_name4.fasta
+
 where name1 represents the cell line of the data,
 the DNA sequences encoded by one-hot matrix. The dataset contains a total of 15057 positive sequences and 15070 negative sequences, and each sequence consists of one thousand bases. We randomly select 80% of the data set as the training set, and the remaining 20% of the data set as the independent testing set using the script as follows:
 
