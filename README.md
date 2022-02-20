@@ -35,7 +35,9 @@ You should extract features by running the script as follows:
 
 Note that you need to modify the contents of lines 410, 468 and 558 to extract the features of the data you need. For example, if you want to extract features of the training set for the RF orientation of the K562 cell line, you need modify the contents of lines 410, 468 and 558 as follows:
 
-`filename = 'data/K562/K562_RF_R_test'` (line 410)
+`filename = 'data/K562/K562_RF_R_train'` (line 410, for specific naming rules, see the above)
+`filename = 'data/K562/K562_RF_F_train'` (line 468, for specific naming rules, see the above)
+`np.save('K562_RF_train.npy',x)` (line 558, save the extracted features)
 
 
 
