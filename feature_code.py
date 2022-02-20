@@ -407,16 +407,12 @@ def PSTNPds(inf, sequence_all, cell_line):
 
 
 ########################### extract first sequence feature##############################
-filename = 'data/K562/K562_RF_R_train_new'
-database_file = 'K562_RF_R'
+filename = 'data/K562/K562_RF_R_test'
 cell_line = 'K562/'
 
-database = 'data/'+ cell_line + database_file + '_train_new.fasta'
-database_out = 'data/'+ cell_line + database_file + '_train_new.txt'
 inf = filename + '.fasta'
 outf = filename + '.txt'
 readwrite(inf, outf)
-readwrite(database, database_out)
 k = 5
 
 encodings = RCKmer(inf)
@@ -428,7 +424,7 @@ data = np.loadtxt(outf)
 if data.ndim == 1:
     data = np.expand_dims(data, 0)
 sites = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
-base = np.loadtxt(database_out)
+base = np.loadtxt(outf)
 pwm1 = PWM(base, k)  # load
 #pwm1 = np.loadtxt('K562_RF_R_PWM.txt')
 #np.savetxt('K562_RF_R_PWM.txt',pwm1)
@@ -440,9 +436,9 @@ for i in range(len(data)):
 # np.savetxt('PCSF_.txt',feature_pcsf)
 feature2_1 = feature_pcsf
 
-#database = 'K562_RF_R_train_new.fasta'
+
 sequence_all = []
-f = open(database, 'r')
+f = open(inf, 'r')
 for i in f.readlines():
     list_line = list(i)
     if list_line[0] == '>':
@@ -469,16 +465,12 @@ feature5_1 = NPSE(k)
 # np.savetxt('NPSE_.txt',feature2)
 
 ########################### extract second sequence feature##############################
-filename = 'data/K562/K562_RF_F_train_new'
-database_file = 'K562_RF_F'
+filename = 'data/K562/K562_RF_F_test'
 cell_line = 'K562/'
 
-database = 'data/'+ cell_line + database_file + '_train_new.fasta'
-database_out = 'data/'+ cell_line + database_file + '_train_new.txt'
 inf = filename + '.fasta'
 outf = filename + '.txt'
 readwrite(inf, outf)
-readwrite(database, database_out)
 
 encodings = RCKmer(inf)
 encodings = np.array(encodings[1:])
@@ -489,7 +481,7 @@ data = np.loadtxt(outf)
 if data.ndim == 1:
     data = np.expand_dims(data, 0)
 sites = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
-base = np.loadtxt(database_out)
+base = np.loadtxt(outf)
 pwm1 = PWM(base, k)  # load
 #pwm1 = np.loadtxt('K562_RF_F_PWM.txt')
 #np.savetxt('K562_RF_F_PWM.txt',pwm1)
@@ -502,7 +494,7 @@ for i in range(len(data)):
 feature2_2 = feature_pcsf
 
 sequence_all = []
-f = open(database, 'r')
+f = open(inf, 'r')
 for i in f.readlines():
     list_line = list(i)
     if list_line[0] == '>':
@@ -563,4 +555,4 @@ def load(feature1_1, feature1_2, feature2_1, feature2_2, x3_1, x3_2, x4_1, x4_2,
 x = load(feature1_1, feature1_2, feature2_1, feature2_2, x3_1, x3_2, x4_1, x4_2, feature5_1, feature5_2)
 
 x = np.expand_dims(x, 2)
-np.save('test.npy',x)
+np.save('K562_RF_test.npy',x)
