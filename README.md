@@ -18,6 +18,8 @@ The code "data_load.py" is used for fusing features.
 
 The code "LSTM.py" is used to build the model.
 
+The code "modeltest.py" is used to test our saved models and reproduce experimental results.
+
 The code "main.py" is used for model training and to evaluate the performance of CLNN-loop on the independent test set. Running "main.py" will import "LSTM.py" automatically.
 
 The folder "model" contains the models trained using different cell lines and CBS pair types, which can ensure the reproduction of our experimental results.
