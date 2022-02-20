@@ -20,9 +20,7 @@ The code "tsne.py" is used for visualization of feature representations.
 
 The code "LSTM.py" is used to build the model.
 
-The code "10-fold.py" is used for 10-fold cross-validation on the training set.
-
-The code "main.py" is used for model training and to evaluate the performance of CLNN-loop on the independent test set. Running "main.py" will import "LSTM.py" and "data_load.py" automatically.
+The code "main.py" is used for model training and to evaluate the performance of CLNN-loop on the independent test set. Running "main.py" will import "LSTM.py" automatically.
 
 The file "model" contains the models trained using different cell lines and CBS pair types, which can ensure the reproduction of our experimental results.
 ## Dependency
