@@ -33,6 +33,12 @@ You should extract features by running the script as follows:
 
 `python feature_code.py`  
 
+Note that you need to modify the contents of lines 410, 468 and 558 to extract the features of the data you need. For example, if you want to extract features of the training set for the RF orientation of the K562 cell line, you need modify the contents of lines 410, 468 and 558 as follows:
+
+`filename = 'data/K562/K562_RF_R_test'` (line 410)
+
+
+
 If you want to compile and run CLNN-loop, you can run the script as follows:  
 
 `python main.py`
