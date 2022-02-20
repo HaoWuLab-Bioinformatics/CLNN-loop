@@ -16,8 +16,6 @@ The code "feature_code.py" is used for feature extraction, including seven featu
 
 The code "data_load.py" is used for fusing features.
 
-The code "tsne.py" is used for visualization of feature representations.
-
 The code "LSTM.py" is used to build the model.
 
 The code "main.py" is used for model training and to evaluate the performance of CLNN-loop on the independent test set. Running "main.py" will import "LSTM.py" automatically.
@@ -34,10 +32,6 @@ tensorflow 2.0
 You should extract features by running the script as follows: 
 
 `python feature_code.py`  
-
-If you want to visualize features, you can run the script as follows:  
-
-`python tsne.py` 
 
 If you want to compile and run CLNN-loop, you can run the script as follows:  
 
