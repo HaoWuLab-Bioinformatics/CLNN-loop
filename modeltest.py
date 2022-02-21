@@ -21,14 +21,14 @@ def GetMetrics_IMR90(model, x, y):
     return [accuracy_score(y, pred)]
 
 
-x_test = np.load('K562_RF_test.npy')
+x_test = np.load('K562_RR_test.npy')
 print(x_test.shape)
 y1 = np.ones(int(len(x_test)/2))
 y2 = np.zeros(int(len(x_test)/2))
 y_test = np.concatenate((y1,y2),axis=0)
 print(y_test.shape)
 
-filepath = 'model/K562_RF.hdf5'
+filepath = 'model/K562_RR.hdf5'
 GetMetrics(load_model(filepath), x_test, y_test)
 '''filepath = 'model/K562.hdf5'
 GetMetrics_IMR90(load_model(filepath), x_test, y_test)'''

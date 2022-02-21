@@ -6,7 +6,7 @@ from sklearn.model_selection import KFold
 import data_load
 
 
-x = np.load('K562_RF_train.npy')
+x = np.load('K562_RR_train.npy')
 print(x.shape)
 y1 = np.ones(int(len(x)/2))
 y2 = np.zeros(int(len(x)/2))
@@ -14,7 +14,7 @@ y = np.concatenate((y1,y2),axis=0)
 print(y.shape)
 x_train, x_val, y_train, y_val = train_test_split(x, y, test_size=0.1, random_state=10)
 
-x_test = np.load('K562_RF_test.npy')
+x_test = np.load('K562_RR_test.npy')
 print(x_test.shape)
 y1 = np.ones(int(len(x_test)/2))
 y2 = np.zeros(int(len(x_test)/2))
